@@ -1,5 +1,19 @@
 # SKHAN — Landing page NSB-300C1 (COD Maroc)
 
+## État du déploiement (21 nov. 2026)
+
+| Élément | Où |
+|---|---|
+| Site en ligne | https://skhan.maroclick.com (alias : https://abdelghafour17.github.io/skhan-maroclick/) |
+| Code source | https://github.com/Abdelghafour17/skhan-maroclick (branche `main`, GitHub Pages) |
+| Commandes | Google Sheet "Commandes SKHAN", onglet `Commandes` + email à chaque commande |
+| Webhook | Apps Script "SKHAN Webhook Commandes" (compte Gmail principal) |
+| DNS | Hostinger → CNAME `skhan` → `abdelghafour17.github.io` |
+
+Mettre à jour le site : modifier `index.html`, puis `git add -A && git commit -m "..." && git push`. GitHub Pages republie en 1 à 2 minutes.
+
+Encore à faire : `WHATSAPP` dans CONFIG (numéro factice), pixels Facebook / TikTok.
+
 Dossier prêt à déployer, 100 % gratuit.
 
 ```
