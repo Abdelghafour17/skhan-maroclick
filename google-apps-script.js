@@ -1,4 +1,4 @@
-/**
+﻿/**
  * SKHAN — Réception des commandes dans Google Sheets (GRATUIT)
  * ------------------------------------------------------------
  * 1. Ouvrir https://sheets.new  → créer une feuille "Commandes SKHAN"
@@ -11,12 +11,13 @@
  * 5. (Optionnel) remplir NOTIFY_EMAIL pour recevoir un mail à chaque commande
  */
 
-const NOTIFY_EMAIL = ""; // ex: "vous@gmail.com" — laisser vide pour désactiver
+const NOTIFY_EMAIL = "habachabdelghafour458@gmail.com"; // ex: "vous@gmail.com" — laisser vide pour désactiver
 const SHEET_NAME = "Commandes";
+const SHEET_ID = "1M8YR4bNZ7urklRu4FXRjJHlSL5gnpgKt-8FXp2cg_sw";
 
 function doPost(e) {
   try {
-    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const ss = SpreadsheetApp.openById(SHEET_ID);
     let sh = ss.getSheetByName(SHEET_NAME);
     if (!sh) {
       sh = ss.insertSheet(SHEET_NAME);
@@ -43,3 +44,4 @@ function doPost(e) {
 function doGet() {
   return ContentService.createTextOutput("SKHAN webhook OK");
 }
+
